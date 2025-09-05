@@ -1,0 +1,32 @@
+<html>
+
+<body>
+    <script>
+        let text = prompt("Enter text: ");
+        text += ";";
+        let months = {};
+        let key = "";
+        let value = "";
+        let is_key = true;
+        for (let symbol of text) {
+            if (symbol === "=") {
+                is_key = false;
+            }
+            else if (symbol === ";") {
+                months[key] = value;
+                key = "";
+                value = "";
+                is_key = true;
+            }
+            else {
+                if (is_key) {
+                    key += symbol;
+                } else {
+                    value += symbol;
+                }
+            }
+        }
+        alert(JSON.stringify(months));
+
+    </script>
+</body>
