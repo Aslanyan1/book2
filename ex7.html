@@ -11,11 +11,7 @@
             let number = Number(prompt("Enter a number"));
             arr.push(number);
         }
-        for (let el of arr) {
-            if (el % 2 == 0) {
-                even.push(el)
-            }
-        }
+        even = arr.filter(number => number % 2 == 0)
         alert(even)
     </script>
 </body>
