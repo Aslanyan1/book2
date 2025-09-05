@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <script>
+        let arr = [];
+        let unique = []
+        let count = 0;
+        let len1 = Number(prompt("Enter a len: "));
+
+        for (let i = 0; i < len1; i++) {
+            let number = Number(prompt("Enter a number"));
+            arr.push(number);
+        }
+
+        for (let num of arr) {
+            let num1 = arr.filter(el => el === num).length;
+
+            if (num1 === 1) {
+                unique.push(num);
+            }
+        }
+        alert(unique)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <script>
+        let arr = [];
+        let count = 0;
+        let len1 = Number(prompt("Enter a len: "));
+
+        for (let i = 0; i < len1; i++) {
+            let number = Number(prompt("Enter a number"));
+            arr.push(number);
+        }
+
+        for (let el of arr) {
+            let digits = String(el);
+            for (let num of digits) {
+                count += Number(num);
+            }
+        }
+
+        alert(count);
+    </script>
+</body>
+
+</html>
