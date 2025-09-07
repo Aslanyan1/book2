@@ -1,0 +1,44 @@
+<html>
+
+<body>
+    <script>
+        function* my_range(...args) {
+            let start, stop, step;
+
+            if (args.length == 1) {
+                start = 0
+                stop = args[0]
+                step = 1
+            }
+            if (args.length == 2) {
+                start = args[0]
+                stop = args[1]
+                step = 1
+            }
+            if (args.length == 3) {
+                start = args[0]
+                stop = args[1]
+                step = args[2]
+            }
+            result = 0
+            while (start < stop) {
+                result += start
+                start += step
+                yield result
+                result = 0
+            }
+        }
+        for (j of my_range(5)) {
+            alert(j)
+        }
+                for (j of my_range(1, 5)) {
+            alert(j)
+        }
+                for (k of my_range(0, 10, 3)) {
+            alert(k)
+        }
+
+    </script>
+</body>
+
+</html>

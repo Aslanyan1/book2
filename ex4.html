@@ -1,0 +1,31 @@
+<html>
+
+<body>
+    <script>
+        function calculator(expression) {
+            let operator = "";
+
+            for (let op of ["**", "+", "-", "*", "/", "%"]) {
+                if (expression.includes(op)) {
+                    operator = op;
+                    break;
+                }
+            }
+            let [operand1, operand2] = expression.split(operator);
+            operand1 = Number(operand1.trim());
+            operand2 = Number(operand2.trim());
+
+            if (operator === "+") return operand1 + operand2;
+            if (operator === "-") return operand1 - operand2;
+            if (operator === "*") return operand1 * operand2;
+            if (operator === "/") return operand1 / operand2;
+            if (operator === "%") return operand1 % operand2;
+            if (operator === "**") return operand1 ** operand2;
+        }
+
+        let exp = prompt("Enter the expression:");
+        alert(calculator(exp));
+    </script>
+</body>
+
+</html>

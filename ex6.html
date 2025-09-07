@@ -1,0 +1,19 @@
+<html>
+
+<body>
+    <script>
+        function num_rev(number) {
+            let reversed_number = 0
+            while (number > 0) {
+                let num = number % 10;
+                reversed_number = reversed_number * 10 + num;
+                number = Math.floor(number / 10);
+            }
+            return reversed_number;
+        }
+        let a = num_rev(123456789);
+        alert(a);
+    </script>
+</body>
+
+</html>
