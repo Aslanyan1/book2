@@ -3,19 +3,20 @@
 <body>
     <script>
         function count_con_vow(text) {
+            let lowercase_text = text.toLowerCase()
             let count_v = 0
             let count_c = 0
             let vowels = 'aeuio'
             let consonant = 'qwrtypsdfghjklzxcvbnm'
             for (el_v of vowels) {
-                for (el of text) {
+                for (el of lowercase_text) {
                     if (el_v == el) {
                         count_v++
                     }
                 }
             }
             for (el_c of consonant) {
-                for (el of text) {
+                for (el of lowercase_text) {
                     if (el_c == el) {
                         count_c++
                     }

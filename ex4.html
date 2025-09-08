@@ -15,12 +15,21 @@
             operand1 = Number(operand1.trim());
             operand2 = Number(operand2.trim());
 
-            if (operator === "+") return operand1 + operand2;
-            if (operator === "-") return operand1 - operand2;
-            if (operator === "*") return operand1 * operand2;
-            if (operator === "/") return operand1 / operand2;
-            if (operator === "%") return operand1 % operand2;
-            if (operator === "**") return operand1 ** operand2;
+            switch (operator) {
+                case "+":
+                    return operand1 + operand2;
+                case "-":
+                    return operand1 - operand2;
+                case "*":
+                    return operand1 * operand2;
+                case "/":
+                    return operand1 / operand2;
+                case "%":
+                    return operand1 % operand2;
+                case "**":
+                    return operand1 ** operand2;
+
+            }
         }
 
         let exp = prompt("Enter the expression:");
